@@ -1,967 +1,954 @@
 <html>
+
 <head>
-<title>Happy Juice Music Bot Index</title>
-<style>
-    .search-bar {
-        margin-bottom: 20px;
-    }
-    .album-artist {
-        margin-top: 20px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-    }
-    .album-artist .album-list {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 10px;
-    }
-    .album-artist .album-list li {
-        display: flex;
-        align-items: center;
-    }
-    .album-artist .album-list img {
-        width: 100px;
-        height: 100px;
-    }
-</style>
-</head>
-<body>
-<h1>Happy Juice Music Bot Index</h1>
-<div class='search-bar'>
-<input type='text' id='search-input' placeholder='Search...' oninput='filterAlbums()'>
-</div>
-<div class='album-artist' data-artist='bandai namco studios & sora ltd.'>
-<h2>Bandai Namco Studios & Sora Ltd.</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Bandai Namco Studios & Sora Ltd._Super Smash Bros. Anthology.jpg'>
-<p class='album-name'>Super Smash Bros. Anthology</p>
-</li>
-<li>
-<img src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 11 Mother - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
-<p class='album-name'>Vol. 11 Mother - Super Smash Bros. Ultimate Expanded Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 12 Pikmin - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
-<p class='album-name'>Vol. 12 Pikmin - Super Smash Bros. Ultimate Expanded Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 4 Metroid - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
-<p class='album-name'>Vol. 4 Metroid - Super Smash Bros. Ultimate Expanded Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 6 Kirby - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
-<p class='album-name'>Vol. 6 Kirby - Super Smash Bros. Ultimate Expanded Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 8 Pokémon - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
-<p class='album-name'>Vol. 8 Pokémon - Super Smash Bros. Ultimate Expanded Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='chip furnace'>
-<h2>Chip Furnace</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Chip Furnace_[standalone recordings].jpg'>
-<p class='album-name'>[standalone recordings]</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='concernedape'>
-<h2>ConcernedApe</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\ConcernedApe_Stardew Valley Original Soundtrack.jpg'>
-<p class='album-name'>Stardew Valley Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\ConcernedApe_Stardew Valley Original Soundtrack - Update 1.3.jpg'>
-<p class='album-name'>Stardew Valley Original Soundtrack - Update 1.3</p>
-</li>
-<li>
-<img src='artwork\ConcernedApe_Stardew Valley Original Soundtrack - Update 1.4.jpg'>
-<p class='album-name'>Stardew Valley Original Soundtrack - Update 1.4</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='dreamworks interactive'>
-<h2>DreamWorks Interactive</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\DreamWorks Interactive_Imaginarium Songs from the Neverhood.jpg'>
-<p class='album-name'>Imaginarium Songs from the Neverhood</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='electronic arts'>
-<h2>Electronic Arts</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Electronic Arts_The Sims 2 (Original Soundtrack).jpg'>
-<p class='album-name'>The Sims 2 (Original Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\Electronic Arts_The Sims 3 Original Videogame Score.jpg'>
-<p class='album-name'>The Sims 3 Original Videogame Score</p>
-</li>
-<li>
-<img src='artwork\Electronic Arts_The Sims 4.jpg'>
-<p class='album-name'>The Sims 4</p>
-</li>
-<li>
-<img src='artwork\Electronic Arts_The Sims Original Video Game Soundtrack.jpg'>
-<p class='album-name'>The Sims Original Video Game Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='extremely ok games'>
-<h2>Extremely OK Games</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Extremely OK Games_Celeste Original Soundtrack.jpg'>
-<p class='album-name'>Celeste Original Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='game freak'>
-<h2>Game Freak</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Game Freak_Pokémon Black & Pokémon White Super Music Collection.jpg'>
-<p class='album-name'>Pokémon Black & Pokémon White Super Music Collection</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='hal laboratory'>
-<h2>HAL Laboratory</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\HAL Laboratory_MOTHER 1 & 2 Original Soundtrack.jpg'>
-<p class='album-name'>MOTHER 1 & 2 Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\HAL Laboratory_Mother 3 Soundtrack.jpg'>
-<p class='album-name'>Mother 3 Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='jackbox games'>
-<h2>Jackbox Games</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Jackbox Games_Drawful 2 OST.jpg'>
-<p class='album-name'>Drawful 2 OST</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 2 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 2 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 3 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 3 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 4 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 4 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 5 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 5 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 6 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 6 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 7 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 7 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 8 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 8 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack 9 Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack 9 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Jackbox Games_The Jackbox Party Pack Soundtrack.jpg'>
-<p class='album-name'>The Jackbox Party Pack Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='kevin macleod'>
-<h2>Kevin MacLeod</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Kevin MacLeod_Action Cuts.jpg'>
-<p class='album-name'>Action Cuts</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Anamalie.jpg'>
-<p class='album-name'>Anamalie</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Aspiring.jpg'>
-<p class='album-name'>Aspiring</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Atlantean Twilight.jpg'>
-<p class='album-name'>Atlantean Twilight</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Bitter Suite.jpg'>
-<p class='album-name'>Bitter Suite</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Calming.jpg'>
-<p class='album-name'>Calming</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Carpe Diem.jpg'>
-<p class='album-name'>Carpe Diem</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Christmas Music.jpg'>
-<p class='album-name'>Christmas Music</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Christmas!.jpg'>
-<p class='album-name'>Christmas!</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Comedy Scoring.jpg'>
-<p class='album-name'>Comedy Scoring</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Darkness.jpg'>
-<p class='album-name'>Darkness</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Disco Ultralounge.jpg'>
-<p class='album-name'>Disco Ultralounge</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Exhilarate.jpg'>
-<p class='album-name'>Exhilarate</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Film Noire.jpg'>
-<p class='album-name'>Film Noire</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Funkorama.jpg'>
-<p class='album-name'>Funkorama</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Happyrock.jpg'>
-<p class='album-name'>Happyrock</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Hard Electronic.jpg'>
-<p class='album-name'>Hard Electronic</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Latinesque.jpg'>
-<p class='album-name'>Latinesque</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Light Electronic.jpg'>
-<p class='album-name'>Light Electronic</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Maccary Bay.jpg'>
-<p class='album-name'>Maccary Bay</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Madness and Paranoia.jpg'>
-<p class='album-name'>Madness and Paranoia</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Medium Electronic.jpg'>
-<p class='album-name'>Medium Electronic</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Mystery.jpg'>
-<p class='album-name'>Mystery</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Netherworld Shanty.jpg'>
-<p class='album-name'>Netherworld Shanty</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Oddities.jpg'>
-<p class='album-name'>Oddities</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Pixelland.jpg'>
-<p class='album-name'>Pixelland</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Polka! Polka! Polka!.jpg'>
-<p class='album-name'>Polka! Polka! Polka!</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_PsychoKiller.jpg'>
-<p class='album-name'>PsychoKiller</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Reggae & Ska.jpg'>
-<p class='album-name'>Reggae & Ska</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Reunited.jpg'>
-<p class='album-name'>Reunited</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Rollin’ at 5.jpg'>
-<p class='album-name'>Rollin’ at 5</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Romance.jpg'>
-<p class='album-name'>Romance</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Sheep Reliability.jpg'>
-<p class='album-name'>Sheep Reliability</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Silent Film Dark Collection.jpg'>
-<p class='album-name'>Silent Film Dark Collection</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Silent Film Light Collection.jpg'>
-<p class='album-name'>Silent Film Light Collection</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Take the Lead.jpg'>
-<p class='album-name'>Take the Lead</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_The Ambient.jpg'>
-<p class='album-name'>The Ambient</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_The Descent.jpg'>
-<p class='album-name'>The Descent</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Video Classica.jpg'>
-<p class='album-name'>Video Classica</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_Wonders.jpg'>
-<p class='album-name'>Wonders</p>
-</li>
-<li>
-<img src='artwork\Kevin MacLeod_[standalone recordings].jpg'>
-<p class='album-name'>[standalone recordings]</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='mediatonic'>
-<h2>Mediatonic</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Mediatonic_Fall Guys (Original Soundtrack).jpg'>
-<p class='album-name'>Fall Guys (Original Soundtrack)</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='mojang studios'>
-<h2>Mojang Studios</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Mojang Studios_Axolotl.jpg'>
-<p class='album-name'>Axolotl</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Dragon Fish.jpg'>
-<p class='album-name'>Dragon Fish</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Life Changing Moments Seem Minor in Pictures.jpg'>
-<p class='album-name'>Life Changing Moments Seem Minor in Pictures</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Minecraft Volume Beta.jpg'>
-<p class='album-name'>Minecraft Volume Beta</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Minecraft, Volume Alpha.jpg'>
-<p class='album-name'>Minecraft, Volume Alpha</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Minecraft Caves & Cliffs (Original Game Soundtrack).jpg'>
-<p class='album-name'>Minecraft Caves & Cliffs (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Minecraft Nether Update (Original Game Soundtrack).jpg'>
-<p class='album-name'>Minecraft Nether Update (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Minecraft The Wild Update (Original Game Soundtrack).jpg'>
-<p class='album-name'>Minecraft The Wild Update (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\Mojang Studios_Shuniji.jpg'>
-<p class='album-name'>Shuniji</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='nintendo'>
-<h2>Nintendo</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Nintendo_Animal Crossing OST.jpg'>
-<p class='album-name'>Animal Crossing OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Animal Crossing City Folk OST.jpg'>
-<p class='album-name'>Animal Crossing City Folk OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Animal Crossing New Horizons Original Soundtrack BGM Collection.jpg'>
-<p class='album-name'>Animal Crossing New Horizons Original Soundtrack BGM Collection</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Animal Crossing New Leaf Original Soundtrack.jpg'>
-<p class='album-name'>Animal Crossing New Leaf Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Donkey Kong Country 2 Diddy's Kong Quest Original Soundtrack.jpg'>
-<p class='album-name'>Donkey Kong Country 2 Diddy's Kong Quest Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Donkey Kong Country OST.jpg'>
-<p class='album-name'>Donkey Kong Country OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Luigi's Mansion OST.jpg'>
-<p class='album-name'>Luigi's Mansion OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_  Luigi's Mansion 3 OST.jpg'>
-<p class='album-name'>  Luigi's Mansion 3 OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_ Luigi's Mansion Dark Moon Original Sound Version.jpg'>
-<p class='album-name'> Luigi's Mansion Dark Moon Original Sound Version</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario & Luigi Bowser's Inside Story OST.jpg'>
-<p class='album-name'>Mario & Luigi Bowser's Inside Story OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario & Luigi Dream Team.jpg'>
-<p class='album-name'>Mario & Luigi Dream Team</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario & Luigi Paper Jam.jpg'>
-<p class='album-name'>Mario & Luigi Paper Jam</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario & Luigi Partners In Time OST.jpg'>
-<p class='album-name'>Mario & Luigi Partners In Time OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario & Luigi： Superstar Saga + Bowser’s Minions - Original Soundtrack.jpg'>
-<p class='album-name'>Mario & Luigi： Superstar Saga + Bowser’s Minions - Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 1 Soundtrack.jpg'>
-<p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 1 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 2 Soundtrack.jpg'>
-<p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 2 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 3 Soundtrack.jpg'>
-<p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 3 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 4 Soundtrack.jpg'>
-<p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 4 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Kart 8 Deluxe Original Sound Version.jpg'>
-<p class='album-name'>Mario Kart 8 Deluxe Original Sound Version</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Party 8 Original Soundtrack.jpg'>
-<p class='album-name'>Mario Party 8 Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Party 9 OST.jpg'>
-<p class='album-name'>Mario Party 9 OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Mario Party DS OST.jpg'>
-<p class='album-name'>Mario Party DS OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_New Super Mario Bros. Wii OST.jpg'>
-<p class='album-name'>New Super Mario Bros. Wii OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Pikmin 2 Original Soundtrack.jpg'>
-<p class='album-name'>Pikmin 2 Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Pikmin 3 Original Soundtrack.jpg'>
-<p class='album-name'>Pikmin 3 Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Pikmin World Pikmin Original Soundtrack.jpg'>
-<p class='album-name'>Pikmin World Pikmin Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Rhythm Heaven Complete Music Collection.jpg'>
-<p class='album-name'>Rhythm Heaven Complete Music Collection</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Splatoon 2 Original Soundtrack - Octotune.jpg'>
-<p class='album-name'>Splatoon 2 Original Soundtrack - Octotune</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Splatoon 2 Original Soundtrack - Splatune 2.jpg'>
-<p class='album-name'>Splatoon 2 Original Soundtrack - Splatune 2</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Splatoon 3 Original Soundtrack - Splatune 3.jpg'>
-<p class='album-name'>Splatoon 3 Original Soundtrack - Splatune 3</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Splatoon 3 – Return of the Mammalians.jpg'>
-<p class='album-name'>Splatoon 3 – Return of the Mammalians</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Splatoon Original Soundtrack - Splatune.jpg'>
-<p class='album-name'>Splatoon Original Soundtrack - Splatune</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Mario 3D World Original Soundtrack.jpg'>
-<p class='album-name'>Super Mario 3D World Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Mario 3D World Bowser's Fury Original Soundtrack.jpg'>
-<p class='album-name'>Super Mario 3D World Bowser's Fury Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Mario 64 Original Soundtrack.jpg'>
-<p class='album-name'>Super Mario 64 Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Mario Galaxy Original Soundtrack Platinum Version.jpg'>
-<p class='album-name'>Super Mario Galaxy Original Soundtrack Platinum Version</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Mario Odyssey Original Sound Track.jpg'>
-<p class='album-name'>Super Mario Odyssey Original Sound Track</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Mario Sunshine Original Soundtrack.jpg'>
-<p class='album-name'>Super Mario Sunshine Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Mario World 2 Yoshi's Island Original Soundtrack.jpg'>
-<p class='album-name'>Super Mario World 2 Yoshi's Island Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Paper Mario Original Sound Version.jpg'>
-<p class='album-name'>Super Paper Mario Original Sound Version</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Smash Bros. Brawl OST.jpg'>
-<p class='album-name'>Super Smash Bros. Brawl OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Super Smash Bros. Melee.jpg'>
-<p class='album-name'>Super Smash Bros. Melee</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Tetris Attack OST.jpg'>
-<p class='album-name'>Tetris Attack OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_The Legend of Zelda Majora's Mask Official Soundtrack.jpg'>
-<p class='album-name'>The Legend of Zelda Majora's Mask Official Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_The Legend of Zelda Ocarina of Time Original Soundtrack.jpg'>
-<p class='album-name'>The Legend of Zelda Ocarina of Time Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_The Legend of Zelda Skyward Sword Original Soundtrack.jpg'>
-<p class='album-name'>The Legend of Zelda Skyward Sword Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_The Legend of Zelda The Wind Waker Original Soundtrack.jpg'>
-<p class='album-name'>The Legend of Zelda The Wind Waker Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_The Legend of Zelda Twilight Princess HD Original Soundtrack.jpg'>
-<p class='album-name'>The Legend of Zelda Twilight Princess HD Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Tomodachi Life.jpg'>
-<p class='album-name'>Tomodachi Life</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Wii (Original System Soundtrack).jpg'>
-<p class='album-name'>Wii (Original System Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Wii Sports OST.jpg'>
-<p class='album-name'>Wii Sports OST</p>
-</li>
-<li>
-<img src='artwork\Nintendo_Wii Sports Resort OST.jpg'>
-<p class='album-name'>Wii Sports Resort OST</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='omocat'>
-<h2>OMOCAT</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\OMOCAT_OMORI OST.jpg'>
-<p class='album-name'>OMORI OST</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='otis mcdonald'>
-<h2>Otis McDonald</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Otis McDonald_Innovations in Booty Shaking Music, Vol. 1.jpg'>
-<p class='album-name'>Innovations in Booty Shaking Music, Vol. 1</p>
-</li>
-<li>
-<img src='artwork\Otis McDonald_Innovations in Booty Shaking Music, Vol. 2.jpg'>
-<p class='album-name'>Innovations in Booty Shaking Music, Vol. 2</p>
-</li>
-<li>
-<img src='artwork\Otis McDonald_SEPTEMBER.jpg'>
-<p class='album-name'>SEPTEMBER</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='popcap'>
-<h2>PopCap</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\PopCap_Bejeweled 2 OST.jpg'>
-<p class='album-name'>Bejeweled 2 OST</p>
-</li>
-<li>
-<img src='artwork\PopCap_Insaniquarium! OST.jpg'>
-<p class='album-name'>Insaniquarium! OST</p>
-</li>
-<li>
-<img src='artwork\PopCap_Plants vs. Zombies Original Soundtrack.jpg'>
-<p class='album-name'>Plants vs. Zombies Original Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='re-logic'>
-<h2>Re-Logic</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Re-Logic_Terraria Official Soundtrack.jpg'>
-<p class='album-name'>Terraria Official Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='sega'>
-<h2>SEGA</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\SEGA_Puyo Puyo Tetris 1 & 2 Original Soundtrack.jpg'>
-<p class='album-name'>Puyo Puyo Tetris 1 & 2 Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\SEGA_Sonic 3 & Knuckles OST.jpg'>
-<p class='album-name'>Sonic 3 & Knuckles OST</p>
-</li>
-<li>
-<img src='artwork\SEGA_Sonic Mania Plus (Original Soundtrack).jpg'>
-<p class='album-name'>Sonic Mania Plus (Original Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\SEGA_Sonic The Hedgehog 2 OST.jpg'>
-<p class='album-name'>Sonic The Hedgehog 2 OST</p>
-</li>
-<li>
-<img src='artwork\SEGA_Sonic The Hedgehog OST.jpg'>
-<p class='album-name'>Sonic The Hedgehog OST</p>
-</li>
-<li>
-<img src='artwork\SEGA_Super Monkey Ball 2 OST.jpg'>
-<p class='album-name'>Super Monkey Ball 2 OST</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='scottgames'>
-<h2>ScottGames</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\ScottGames_FNaF World (Original Soundtrack).jpg'>
-<p class='album-name'>FNaF World (Original Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\ScottGames_Five Nights at Freddy's Security Breach (Original Soundtrack).jpg'>
-<p class='album-name'>Five Nights at Freddy's Security Breach (Original Soundtrack)</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='sony computer entertainment'>
-<h2>Sony Computer Entertainment</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Sony Computer Entertainment_Parappa The Rapper 2 Original Sound Track.jpg'>
-<p class='album-name'>Parappa The Rapper 2 Original Sound Track</p>
-</li>
-<li>
-<img src='artwork\Sony Computer Entertainment_Um Jammer Lammy Original Soundtrack.jpg'>
-<p class='album-name'>Um Jammer Lammy Original Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='square enix'>
-<h2>Square Enix</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Square Enix_Kingdom Hearts II.jpg'>
-<p class='album-name'>Kingdom Hearts II</p>
-</li>
-<li>
-<img src='artwork\Square Enix_Kingdom Hearts Original Soundtrack COMPLETE.jpg'>
-<p class='album-name'>Kingdom Hearts Original Soundtrack COMPLETE</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='stream cafe'>
-<h2>Stream Cafe</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Stream Cafe_boy meets girl.jpg'>
-<p class='album-name'>boy meets girl</p>
-</li>
-<li>
-<img src='artwork\Stream Cafe_cherry blossoms.jpg'>
-<p class='album-name'>cherry blossoms</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='studiomdhr'>
-<h2>StudioMDHR</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\StudioMDHR_Cuphead - Original Soundtrack.jpg'>
-<p class='album-name'>Cuphead - Original Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='sukeban games'>
-<h2>Sukeban Games</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Sukeban Games_VA-11 HALL-A - Second Round.jpg'>
-<p class='album-name'>VA-11 HALL-A - Second Round</p>
-</li>
-<li>
-<img src='artwork\Sukeban Games_VA-11 HALL-A Complete Sound Collection.jpg'>
-<p class='album-name'>VA-11 HALL-A Complete Sound Collection</p>
-</li>
-<li>
-<img src='artwork\Sukeban Games_VA‐11 Hall‐A Prologue (Original Soundtrack Sounds from the Future).jpg'>
-<p class='album-name'>VA‐11 Hall‐A Prologue (Original Soundtrack Sounds from the Future)</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='toby fox'>
-<h2>Toby Fox</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Toby Fox_DELTARUNE Chapter 1 Soundtrack.jpg'>
-<p class='album-name'>DELTARUNE Chapter 1 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Toby Fox_DELTARUNE Chapter 2 Soundtrack.jpg'>
-<p class='album-name'>DELTARUNE Chapter 2 Soundtrack</p>
-</li>
-<li>
-<img src='artwork\Toby Fox_UNDERTALE Complete OST.jpg'>
-<p class='album-name'>UNDERTALE Complete OST</p>
-</li>
-<li>
-<img src='artwork\Toby Fox_Undertale Looped.jpg'>
-<p class='album-name'>Undertale Looped</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='tour de pizza'>
-<h2>Tour De Pizza</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Tour De Pizza_Pizza Tower (Early OST).jpg'>
-<p class='album-name'>Pizza Tower (Early OST)</p>
-</li>
-<li>
-<img src='artwork\Tour De Pizza_Pizza Tower Soundtrack.jpg'>
-<p class='album-name'>Pizza Tower Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='valve corporation'>
-<h2>Valve Corporation</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Valve Corporation_Fight Songs The Music of Team Fortress 2.jpg'>
-<p class='album-name'>Fight Songs The Music of Team Fortress 2</p>
-</li>
-<li>
-<img src='artwork\Valve Corporation_Team Fortress 2 Official Soundtrack.jpg'>
-<p class='album-name'>Team Fortress 2 Official Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='wayforward technologies'>
-<h2>WayForward Technologies</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\WayForward Technologies_Shantae Half-Genie Hero OST.jpg'>
-<p class='album-name'>Shantae Half-Genie Hero OST</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='xbox game studios'>
-<h2>Xbox Game Studios</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\Xbox Game Studios_Psychonauts 2 (Original Soundtrack), Vol. 3.jpg'>
-<p class='album-name'>Psychonauts 2 (Original Soundtrack), Vol. 3</p>
-</li>
-<li>
-<img src='artwork\Xbox Game Studios_Psychonauts 2 Original Soundtrack Volume 1.jpg'>
-<p class='album-name'>Psychonauts 2 Original Soundtrack Volume 1</p>
-</li>
-<li>
-<img src='artwork\Xbox Game Studios_Psychonauts 2 Original Soundtrack Volume 2.jpg'>
-<p class='album-name'>Psychonauts 2 Original Soundtrack Volume 2</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='innersloth'>
-<h2>innersloth</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\innersloth_The Henry Stickmin Collection Soundtrack.jpg'>
-<p class='album-name'>The Henry Stickmin Collection Soundtrack</p>
-</li>
-</ul>
-</div>
-<div class='album-artist' data-artist='mihoyo'>
-<h2>miHoYo</h2>
-<ul class='album-list'>
-<li>
-<img src='artwork\miHoYo_Genshin Impact - Islands of the Lost and Forgotten (Original Game Soundtrack).jpg'>
-<p class='album-name'>Genshin Impact - Islands of the Lost and Forgotten (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Genshin Impact - Realm of Tranquil Eternity (Original Game Soundtrack).jpg'>
-<p class='album-name'>Genshin Impact - Realm of Tranquil Eternity (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Genshin Impact - The Shimmering Voyage (Original Game Soundtrack).jpg'>
-<p class='album-name'>Genshin Impact - The Shimmering Voyage (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Genshin Impact - The Stellar Moments (Original Game Soundtrack).jpg'>
-<p class='album-name'>Genshin Impact - The Stellar Moments (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Genshin Impact - The Unfathomable Sand Dunes (Original Game Soundtrack).jpg'>
-<p class='album-name'>Genshin Impact - The Unfathomable Sand Dunes (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Genshin Impact - Vortex of Legends.jpg'>
-<p class='album-name'>Genshin Impact - Vortex of Legends</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Honkai Star Rail - Of Snow and Ember (Original Game Soundtrack).jpg'>
-<p class='album-name'>Honkai Star Rail - Of Snow and Ember (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Honkai Star Rail - Out of Control (Original Game Soundtrack).jpg'>
-<p class='album-name'>Honkai Star Rail - Out of Control (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Houkai 3rd - Review Original Soundtrack.jpg'>
-<p class='album-name'>Houkai 3rd - Review Original Soundtrack</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Paradox (Honkai Impact 3rd Original Soundtrack).jpg'>
-<p class='album-name'>Paradox (Honkai Impact 3rd Original Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_Tears of Themis - Encounter (Original Game Soundtrack).jpg'>
-<p class='album-name'>Tears of Themis - Encounter (Original Game Soundtrack)</p>
-</li>
-<li>
-<img src='artwork\miHoYo_原神 - 皎月云间之梦 Jade Moon Upon a Sea of Clouds.jpg'>
-<p class='album-name'>原神 - 皎月云间之梦 Jade Moon Upon a Sea of Clouds</p>
-</li>
-<li>
-<img src='artwork\miHoYo_原神 - 风与异乡人.jpg'>
-<p class='album-name'>原神 - 风与异乡人</p>
-</li>
-<li>
-<img src='artwork\miHoYo_原神 - 风与牧歌之城.jpg'>
-<p class='album-name'>原神 - 风与牧歌之城</p>
-</li>
-<li>
-<img src='artwork\miHoYo_原神-ジュニャーナとヴィディヤーの森 Forest of Jnana and Vidya.jpg'>
-<p class='album-name'>原神-ジュニャーナとヴィディヤーの森 Forest of Jnana and Vidya</p>
-</li>
-<li>
-<img src='artwork\miHoYo_原神-輝く星々Vol. 3 (Original Game Soundtrack).jpg'>
-<p class='album-name'>原神-輝く星々Vol. 3 (Original Game Soundtrack)</p>
-</li>
-</ul>
-</div>
-<script>
-    function filterAlbums() {
-        var searchTerm = document.getElementById('search-input').value.toLowerCase();
-        var albumArtists = document.getElementsByClassName('album-artist');
-        for (var i = 0; i < albumArtists.length; i++) {
-            var albumArtist = albumArtists[i];
-            var artistName = albumArtist.getAttribute('data-artist').toLowerCase();
-            var albums = albumArtist.getElementsByClassName('album-list')[0].getElementsByTagName('li');
-            var foundMatch = false;
-            for (var j = 0; j < albums.length; j++) {
-                var album = albums[j];
-                var albumName = album.getElementsByClassName('album-name')[0].textContent.toLowerCase();
-                if (artistName.includes(searchTerm) || albumName.includes(searchTerm)) {
-                    album.style.display = 'flex';
-                    foundMatch = true;
-                } else {
-                    album.style.display = 'none';
-                }
-            }
-            if (foundMatch) {
-                albumArtist.style.display = 'block';
-            } else {
-                albumArtist.style.display = 'none';
-            }
+    <title>Happy Juice Music Bot Index</title>
+    <style>
+        .search-bar {
+            margin-bottom: 20px;
         }
-    }
-</script>
+
+        .album-artist {
+            margin-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .album-artist .album-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .album-artist .album-list li {
+            display: flex;
+            align-items: center;
+        }
+
+        .album-artist .album-list img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Happy Juice Music Bot Index</h1>
+    <div class='search-bar'>
+        <input type='text' id='search-input' placeholder='Search...' oninput='filterAlbums()'>
+    </div>
+    <div class='album-artist' data-artist='bandai namco studios & sora ltd.'>
+        <h2>Bandai Namco Studios & Sora Ltd.</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Bandai Namco Studios & Sora Ltd._Super Smash Bros. Anthology.jpg'>
+                <p class='album-name'>Super Smash Bros. Anthology</p>
+            </li>
+            <li>
+                <img
+                    src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 11 Mother - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
+                <p class='album-name'>Vol. 11 Mother - Super Smash Bros. Ultimate Expanded Soundtrack</p>
+            </li>
+            <li>
+                <img
+                    src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 12 Pikmin - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
+                <p class='album-name'>Vol. 12 Pikmin - Super Smash Bros. Ultimate Expanded Soundtrack</p>
+            </li>
+            <li>
+                <img
+                    src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 4 Metroid - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
+                <p class='album-name'>Vol. 4 Metroid - Super Smash Bros. Ultimate Expanded Soundtrack</p>
+            </li>
+            <li>
+                <img
+                    src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 6 Kirby - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
+                <p class='album-name'>Vol. 6 Kirby - Super Smash Bros. Ultimate Expanded Soundtrack</p>
+            </li>
+            <li>
+                <img
+                    src='artwork\Bandai Namco Studios & Sora Ltd._Vol. 8 Pokémon - Super Smash Bros. Ultimate Expanded Soundtrack.jpg'>
+                <p class='album-name'>Vol. 8 Pokémon - Super Smash Bros. Ultimate Expanded Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='chip furnace'>
+        <h2>Chip Furnace</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Chip Furnace_[standalone recordings].jpg'>
+                <p class='album-name'>[standalone recordings]</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='concernedape'>
+        <h2>ConcernedApe</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\ConcernedApe_Stardew Valley Original Soundtrack.jpg'>
+                <p class='album-name'>Stardew Valley Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\ConcernedApe_Stardew Valley Original Soundtrack - Update 1.3.jpg'>
+                <p class='album-name'>Stardew Valley Original Soundtrack - Update 1.3</p>
+            </li>
+            <li>
+                <img src='artwork\ConcernedApe_Stardew Valley Original Soundtrack - Update 1.4.jpg'>
+                <p class='album-name'>Stardew Valley Original Soundtrack - Update 1.4</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='dreamworks interactive'>
+        <h2>DreamWorks Interactive</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\DreamWorks Interactive_Imaginarium Songs from the Neverhood.jpg'>
+                <p class='album-name'>Imaginarium Songs from the Neverhood</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='electronic arts'>
+        <h2>Electronic Arts</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Electronic Arts_The Sims 2 (Original Soundtrack).jpg'>
+                <p class='album-name'>The Sims 2 (Original Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\Electronic Arts_The Sims 3 Original Videogame Score.jpg'>
+                <p class='album-name'>The Sims 3 Original Videogame Score</p>
+            </li>
+            <li>
+                <img src='artwork\Electronic Arts_The Sims 4.jpg'>
+                <p class='album-name'>The Sims 4</p>
+            </li>
+            <li>
+                <img src='artwork\Electronic Arts_The Sims Original Video Game Soundtrack.jpg'>
+                <p class='album-name'>The Sims Original Video Game Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='extremely ok games'>
+        <h2>Extremely OK Games</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Extremely OK Games_Celeste Original Soundtrack.jpg'>
+                <p class='album-name'>Celeste Original Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='game freak'>
+        <h2>Game Freak</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Game Freak_Pokémon Black & Pokémon White Super Music Collection.jpg'>
+                <p class='album-name'>Pokémon Black & Pokémon White Super Music Collection</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='hal laboratory'>
+        <h2>HAL Laboratory</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\HAL Laboratory_MOTHER 1 & 2 Original Soundtrack.jpg'>
+                <p class='album-name'>MOTHER 1 & 2 Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\HAL Laboratory_Mother 3 Soundtrack.jpg'>
+                <p class='album-name'>Mother 3 Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='jackbox games'>
+        <h2>Jackbox Games</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Jackbox Games_Drawful 2 OST.jpg'>
+                <p class='album-name'>Drawful 2 OST</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 2 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 2 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 3 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 3 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 4 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 4 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 5 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 5 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 6 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 6 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 7 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 7 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 8 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 8 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack 9 Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack 9 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Jackbox Games_The Jackbox Party Pack Soundtrack.jpg'>
+                <p class='album-name'>The Jackbox Party Pack Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='kevin macleod'>
+        <h2>Kevin MacLeod</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Kevin MacLeod_Action Cuts.jpg'>
+                <p class='album-name'>Action Cuts</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Anamalie.jpg'>
+                <p class='album-name'>Anamalie</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Aspiring.jpg'>
+                <p class='album-name'>Aspiring</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Atlantean Twilight.jpg'>
+                <p class='album-name'>Atlantean Twilight</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Bitter Suite.jpg'>
+                <p class='album-name'>Bitter Suite</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Calming.jpg'>
+                <p class='album-name'>Calming</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Carpe Diem.jpg'>
+                <p class='album-name'>Carpe Diem</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Christmas Music.jpg'>
+                <p class='album-name'>Christmas Music</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Christmas!.jpg'>
+                <p class='album-name'>Christmas!</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Comedy Scoring.jpg'>
+                <p class='album-name'>Comedy Scoring</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Darkness.jpg'>
+                <p class='album-name'>Darkness</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Disco Ultralounge.jpg'>
+                <p class='album-name'>Disco Ultralounge</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Exhilarate.jpg'>
+                <p class='album-name'>Exhilarate</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Film Noire.jpg'>
+                <p class='album-name'>Film Noire</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Funkorama.jpg'>
+                <p class='album-name'>Funkorama</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Happyrock.jpg'>
+                <p class='album-name'>Happyrock</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Hard Electronic.jpg'>
+                <p class='album-name'>Hard Electronic</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Latinesque.jpg'>
+                <p class='album-name'>Latinesque</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Light Electronic.jpg'>
+                <p class='album-name'>Light Electronic</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Maccary Bay.jpg'>
+                <p class='album-name'>Maccary Bay</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Madness and Paranoia.jpg'>
+                <p class='album-name'>Madness and Paranoia</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Medium Electronic.jpg'>
+                <p class='album-name'>Medium Electronic</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Mystery.jpg'>
+                <p class='album-name'>Mystery</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Netherworld Shanty.jpg'>
+                <p class='album-name'>Netherworld Shanty</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Oddities.jpg'>
+                <p class='album-name'>Oddities</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Pixelland.jpg'>
+                <p class='album-name'>Pixelland</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Polka! Polka! Polka!.jpg'>
+                <p class='album-name'>Polka! Polka! Polka!</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_PsychoKiller.jpg'>
+                <p class='album-name'>PsychoKiller</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Reggae & Ska.jpg'>
+                <p class='album-name'>Reggae & Ska</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Reunited.jpg'>
+                <p class='album-name'>Reunited</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Rollin’ at 5.jpg'>
+                <p class='album-name'>Rollin’ at 5</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Romance.jpg'>
+                <p class='album-name'>Romance</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Sheep Reliability.jpg'>
+                <p class='album-name'>Sheep Reliability</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Silent Film Dark Collection.jpg'>
+                <p class='album-name'>Silent Film Dark Collection</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Silent Film Light Collection.jpg'>
+                <p class='album-name'>Silent Film Light Collection</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Take the Lead.jpg'>
+                <p class='album-name'>Take the Lead</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_The Ambient.jpg'>
+                <p class='album-name'>The Ambient</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_The Descent.jpg'>
+                <p class='album-name'>The Descent</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Video Classica.jpg'>
+                <p class='album-name'>Video Classica</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_Wonders.jpg'>
+                <p class='album-name'>Wonders</p>
+            </li>
+            <li>
+                <img src='artwork\Kevin MacLeod_[standalone recordings].jpg'>
+                <p class='album-name'>[standalone recordings]</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='mediatonic'>
+        <h2>Mediatonic</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Mediatonic_Fall Guys (Original Soundtrack).jpg'>
+                <p class='album-name'>Fall Guys (Original Soundtrack)</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='mojang studios'>
+        <h2>Mojang Studios</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Mojang Studios_Axolotl.jpg'>
+                <p class='album-name'>Axolotl</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Dragon Fish.jpg'>
+                <p class='album-name'>Dragon Fish</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Life Changing Moments Seem Minor in Pictures.jpg'>
+                <p class='album-name'>Life Changing Moments Seem Minor in Pictures</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Minecraft Volume Beta.jpg'>
+                <p class='album-name'>Minecraft Volume Beta</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Minecraft, Volume Alpha.jpg'>
+                <p class='album-name'>Minecraft, Volume Alpha</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Minecraft Caves & Cliffs (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Minecraft Caves & Cliffs (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Minecraft Nether Update (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Minecraft Nether Update (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Minecraft The Wild Update (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Minecraft The Wild Update (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\Mojang Studios_Shuniji.jpg'>
+                <p class='album-name'>Shuniji</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='nintendo'>
+        <h2>Nintendo</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Nintendo_Animal Crossing OST.jpg'>
+                <p class='album-name'>Animal Crossing OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Animal Crossing City Folk OST.jpg'>
+                <p class='album-name'>Animal Crossing City Folk OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Animal Crossing New Horizons Original Soundtrack BGM Collection.jpg'>
+                <p class='album-name'>Animal Crossing New Horizons Original Soundtrack BGM Collection</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Animal Crossing New Leaf Original Soundtrack.jpg'>
+                <p class='album-name'>Animal Crossing New Leaf Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Donkey Kong Country 2 Diddy' s Kong Quest Original Soundtrack.jpg'>
+                <p class='album-name'>Donkey Kong Country 2 Diddy's Kong Quest Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Donkey Kong Country OST.jpg'>
+                <p class='album-name'>Donkey Kong Country OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Luigi' s Mansion OST.jpg'>
+                <p class='album-name'>Luigi's Mansion OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_  Luigi' s Mansion 3 OST.jpg'>
+                <p class='album-name'> Luigi's Mansion 3 OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_ Luigi' s Mansion Dark Moon Original Sound Version.jpg'>
+                <p class='album-name'> Luigi's Mansion Dark Moon Original Sound Version</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario & Luigi Bowser' s Inside Story OST.jpg'>
+                <p class='album-name'>Mario & Luigi Bowser's Inside Story OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario & Luigi Dream Team.jpg'>
+                <p class='album-name'>Mario & Luigi Dream Team</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario & Luigi Paper Jam.jpg'>
+                <p class='album-name'>Mario & Luigi Paper Jam</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario & Luigi Partners In Time OST.jpg'>
+                <p class='album-name'>Mario & Luigi Partners In Time OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario & Luigi: Superstar Saga + Bowser’s Minions - Original Soundtrack.jpg'>
+                <p class='album-name'>Mario & Luigi： Superstar Saga + Bowser’s Minions - Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 1 Soundtrack.jpg'>
+                <p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 1 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 2 Soundtrack.jpg'>
+                <p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 2 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 3 Soundtrack.jpg'>
+                <p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 3 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Kart 8 Deluxe Booster Course Pass Wave 4 Soundtrack.jpg'>
+                <p class='album-name'>Mario Kart 8 Deluxe Booster Course Pass Wave 4 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Kart 8 Deluxe Original Sound Version.jpg'>
+                <p class='album-name'>Mario Kart 8 Deluxe Original Sound Version</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Party 8 Original Soundtrack.jpg'>
+                <p class='album-name'>Mario Party 8 Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Party 9 OST.jpg'>
+                <p class='album-name'>Mario Party 9 OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Mario Party DS OST.jpg'>
+                <p class='album-name'>Mario Party DS OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_New Super Mario Bros. Wii OST.jpg'>
+                <p class='album-name'>New Super Mario Bros. Wii OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Pikmin 2 Original Soundtrack.jpg'>
+                <p class='album-name'>Pikmin 2 Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Pikmin 3 Original Soundtrack.jpg'>
+                <p class='album-name'>Pikmin 3 Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Pikmin World Pikmin Original Soundtrack.jpg'>
+                <p class='album-name'>Pikmin World Pikmin Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Rhythm Heaven Complete Music Collection.jpg'>
+                <p class='album-name'>Rhythm Heaven Complete Music Collection</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Splatoon 2 Original Soundtrack - Octotune.jpg'>
+                <p class='album-name'>Splatoon 2 Original Soundtrack - Octotune</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Splatoon 2 Original Soundtrack - Splatune 2.jpg'>
+                <p class='album-name'>Splatoon 2 Original Soundtrack - Splatune 2</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Splatoon 3 Original Soundtrack - Splatune 3.jpg'>
+                <p class='album-name'>Splatoon 3 Original Soundtrack - Splatune 3</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Splatoon 3 – Return of the Mammalians.jpg'>
+                <p class='album-name'>Splatoon 3 – Return of the Mammalians</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Splatoon Original Soundtrack - Splatune.jpg'>
+                <p class='album-name'>Splatoon Original Soundtrack - Splatune</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Mario 3D World Original Soundtrack.jpg'>
+                <p class='album-name'>Super Mario 3D World Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Mario 3D World Bowser' s Fury Original Soundtrack.jpg'>
+                <p class='album-name'>Super Mario 3D World Bowser's Fury Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Mario 64 Original Soundtrack.jpg'>
+                <p class='album-name'>Super Mario 64 Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Mario Galaxy Original Soundtrack Platinum Version.jpg'>
+                <p class='album-name'>Super Mario Galaxy Original Soundtrack Platinum Version</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Mario Odyssey Original Sound Track.jpg'>
+                <p class='album-name'>Super Mario Odyssey Original Sound Track</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Mario Sunshine Original Soundtrack.jpg'>
+                <p class='album-name'>Super Mario Sunshine Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Mario World 2 Yoshi' s Island Original Soundtrack.jpg'>
+                <p class='album-name'>Super Mario World 2 Yoshi's Island Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Paper Mario Original Sound Version.jpg'>
+                <p class='album-name'>Super Paper Mario Original Sound Version</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Smash Bros. Brawl OST.jpg'>
+                <p class='album-name'>Super Smash Bros. Brawl OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Super Smash Bros. Melee.jpg'>
+                <p class='album-name'>Super Smash Bros. Melee</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Tetris Attack OST.jpg'>
+                <p class='album-name'>Tetris Attack OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_The Legend of Zelda Majora' s Mask Official Soundtrack.jpg'>
+                <p class='album-name'>The Legend of Zelda Majora's Mask Official Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_The Legend of Zelda Ocarina of Time Original Soundtrack.jpg'>
+                <p class='album-name'>The Legend of Zelda Ocarina of Time Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_The Legend of Zelda Skyward Sword Original Soundtrack.jpg'>
+                <p class='album-name'>The Legend of Zelda Skyward Sword Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_The Legend of Zelda The Wind Waker Original Soundtrack.jpg'>
+                <p class='album-name'>The Legend of Zelda The Wind Waker Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_The Legend of Zelda Twilight Princess HD Original Soundtrack.jpg'>
+                <p class='album-name'>The Legend of Zelda Twilight Princess HD Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Tomodachi Life.jpg'>
+                <p class='album-name'>Tomodachi Life</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Wii (Original System Soundtrack).jpg'>
+                <p class='album-name'>Wii (Original System Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Wii Sports OST.jpg'>
+                <p class='album-name'>Wii Sports OST</p>
+            </li>
+            <li>
+                <img src='artwork\Nintendo_Wii Sports Resort OST.jpg'>
+                <p class='album-name'>Wii Sports Resort OST</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='omocat'>
+        <h2>OMOCAT</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\OMOCAT_OMORI OST.jpg'>
+                <p class='album-name'>OMORI OST</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='otis mcdonald'>
+        <h2>Otis McDonald</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Otis McDonald_Innovations in Booty Shaking Music, Vol. 1.jpg'>
+                <p class='album-name'>Innovations in Booty Shaking Music, Vol. 1</p>
+            </li>
+            <li>
+                <img src='artwork\Otis McDonald_Innovations in Booty Shaking Music, Vol. 2.jpg'>
+                <p class='album-name'>Innovations in Booty Shaking Music, Vol. 2</p>
+            </li>
+            <li>
+                <img src='artwork\Otis McDonald_SEPTEMBER.jpg'>
+                <p class='album-name'>SEPTEMBER</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='popcap'>
+        <h2>PopCap</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\PopCap_Bejeweled 2 OST.jpg'>
+                <p class='album-name'>Bejeweled 2 OST</p>
+            </li>
+            <li>
+                <img src='artwork\PopCap_Insaniquarium! OST.jpg'>
+                <p class='album-name'>Insaniquarium! OST</p>
+            </li>
+            <li>
+                <img src='artwork\PopCap_Plants vs. Zombies Original Soundtrack.jpg'>
+                <p class='album-name'>Plants vs. Zombies Original Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='re-logic'>
+        <h2>Re-Logic</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Re-Logic_Terraria Official Soundtrack.jpg'>
+                <p class='album-name'>Terraria Official Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='sega'>
+        <h2>SEGA</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\SEGA_Puyo Puyo Tetris 1 & 2 Original Soundtrack.jpg'>
+                <p class='album-name'>Puyo Puyo Tetris 1 & 2 Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\SEGA_Sonic 3 & Knuckles OST.jpg'>
+                <p class='album-name'>Sonic 3 & Knuckles OST</p>
+            </li>
+            <li>
+                <img src='artwork\SEGA_Sonic Mania Plus (Original Soundtrack).jpg'>
+                <p class='album-name'>Sonic Mania Plus (Original Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\SEGA_Sonic The Hedgehog 2 OST.jpg'>
+                <p class='album-name'>Sonic The Hedgehog 2 OST</p>
+            </li>
+            <li>
+                <img src='artwork\SEGA_Sonic The Hedgehog OST.jpg'>
+                <p class='album-name'>Sonic The Hedgehog OST</p>
+            </li>
+            <li>
+                <img src='artwork\SEGA_Super Monkey Ball 2 OST.jpg'>
+                <p class='album-name'>Super Monkey Ball 2 OST</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='scottgames'>
+        <h2>ScottGames</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\ScottGames_FNaF World (Original Soundtrack).jpg'>
+                <p class='album-name'>FNaF World (Original Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\ScottGames_Five Nights at Freddy' s Security Breach (Original Soundtrack).jpg'>
+                <p class='album-name'>Five Nights at Freddy's Security Breach (Original Soundtrack)</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='sony computer entertainment'>
+        <h2>Sony Computer Entertainment</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Sony Computer Entertainment_Parappa The Rapper 2 Original Sound Track.jpg'>
+                <p class='album-name'>Parappa The Rapper 2 Original Sound Track</p>
+            </li>
+            <li>
+                <img src='artwork\Sony Computer Entertainment_Um Jammer Lammy Original Soundtrack.jpg'>
+                <p class='album-name'>Um Jammer Lammy Original Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='square enix'>
+        <h2>Square Enix</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Square Enix_Kingdom Hearts II.jpg'>
+                <p class='album-name'>Kingdom Hearts II</p>
+            </li>
+            <li>
+                <img src='artwork\Square Enix_Kingdom Hearts Original Soundtrack COMPLETE.jpg'>
+                <p class='album-name'>Kingdom Hearts Original Soundtrack COMPLETE</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='stream cafe'>
+        <h2>Stream Cafe</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Stream Cafe_boy meets girl.jpg'>
+                <p class='album-name'>boy meets girl</p>
+            </li>
+            <li>
+                <img src='artwork\Stream Cafe_cherry blossoms.jpg'>
+                <p class='album-name'>cherry blossoms</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='studiomdhr'>
+        <h2>StudioMDHR</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\StudioMDHR_Cuphead - Original Soundtrack.jpg'>
+                <p class='album-name'>Cuphead - Original Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='sukeban games'>
+        <h2>Sukeban Games</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Sukeban Games_VA-11 HALL-A - Second Round.jpg'>
+                <p class='album-name'>VA-11 HALL-A - Second Round</p>
+            </li>
+            <li>
+                <img src='artwork\Sukeban Games_VA-11 HALL-A Complete Sound Collection.jpg'>
+                <p class='album-name'>VA-11 HALL-A Complete Sound Collection</p>
+            </li>
+            <li>
+                <img src='artwork\Sukeban Games_VA‐11 Hall‐A Prologue (Original Soundtrack Sounds from the Future).jpg'>
+                <p class='album-name'>VA‐11 Hall‐A Prologue (Original Soundtrack Sounds from the Future)</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='toby fox'>
+        <h2>Toby Fox</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Toby Fox_DELTARUNE Chapter 1 Soundtrack.jpg'>
+                <p class='album-name'>DELTARUNE Chapter 1 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Toby Fox_DELTARUNE Chapter 2 Soundtrack.jpg'>
+                <p class='album-name'>DELTARUNE Chapter 2 Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\Toby Fox_UNDERTALE Complete OST.jpg'>
+                <p class='album-name'>UNDERTALE Complete OST</p>
+            </li>
+            <li>
+                <img src='artwork\Toby Fox_Undertale Looped.jpg'>
+                <p class='album-name'>Undertale Looped</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='tour de pizza'>
+        <h2>Tour De Pizza</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Tour De Pizza_Pizza Tower (Early OST).jpg'>
+                <p class='album-name'>Pizza Tower (Early OST)</p>
+            </li>
+            <li>
+                <img src='artwork\Tour De Pizza_Pizza Tower Soundtrack.jpg'>
+                <p class='album-name'>Pizza Tower Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='valve corporation'>
+        <h2>Valve Corporation</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Valve Corporation_Fight Songs The Music of Team Fortress 2.jpg'>
+                <p class='album-name'>Fight Songs The Music of Team Fortress 2</p>
+            </li>
+            <li>
+                <img src='artwork\Valve Corporation_Team Fortress 2 Official Soundtrack.jpg'>
+                <p class='album-name'>Team Fortress 2 Official Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='wayforward technologies'>
+        <h2>WayForward Technologies</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\WayForward Technologies_Shantae Half-Genie Hero OST.jpg'>
+                <p class='album-name'>Shantae Half-Genie Hero OST</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='xbox game studios'>
+        <h2>Xbox Game Studios</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\Xbox Game Studios_Psychonauts 2 (Original Soundtrack), Vol. 3.jpg'>
+                <p class='album-name'>Psychonauts 2 (Original Soundtrack), Vol. 3</p>
+            </li>
+            <li>
+                <img src='artwork\Xbox Game Studios_Psychonauts 2 Original Soundtrack Volume 1.jpg'>
+                <p class='album-name'>Psychonauts 2 Original Soundtrack Volume 1</p>
+            </li>
+            <li>
+                <img src='artwork\Xbox Game Studios_Psychonauts 2 Original Soundtrack Volume 2.jpg'>
+                <p class='album-name'>Psychonauts 2 Original Soundtrack Volume 2</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='innersloth'>
+        <h2>innersloth</h2>
+        <ul class='album-list'>
+            <li>
+                <img src='artwork\innersloth_The Henry Stickmin Collection Soundtrack.jpg'>
+                <p class='album-name'>The Henry Stickmin Collection Soundtrack</p>
+            </li>
+        </ul>
+    </div>
+    <div class='album-artist' data-artist='mihoyo'>
+        <h2>miHoYo</h2>
+        <ul class='album-list'>
+            <li>
+                <img
+                    src='artwork\miHoYo_Genshin Impact - Islands of the Lost and Forgotten (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Genshin Impact - Islands of the Lost and Forgotten (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Genshin Impact - Realm of Tranquil Eternity (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Genshin Impact - Realm of Tranquil Eternity (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Genshin Impact - The Shimmering Voyage (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Genshin Impact - The Shimmering Voyage (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Genshin Impact - The Stellar Moments (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Genshin Impact - The Stellar Moments (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Genshin Impact - The Unfathomable Sand Dunes (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Genshin Impact - The Unfathomable Sand Dunes (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Genshin Impact - Vortex of Legends.jpg'>
+                <p class='album-name'>Genshin Impact - Vortex of Legends</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Honkai Star Rail - Of Snow and Ember (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Honkai Star Rail - Of Snow and Ember (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Honkai Star Rail - Out of Control (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Honkai Star Rail - Out of Control (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Houkai 3rd - Review Original Soundtrack.jpg'>
+                <p class='album-name'>Houkai 3rd - Review Original Soundtrack</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Paradox (Honkai Impact 3rd Original Soundtrack).jpg'>
+                <p class='album-name'>Paradox (Honkai Impact 3rd Original Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_Tears of Themis - Encounter (Original Game Soundtrack).jpg'>
+                <p class='album-name'>Tears of Themis - Encounter (Original Game Soundtrack)</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_原神 - 皎月云间之梦 Jade Moon Upon a Sea of Clouds.jpg'>
+                <p class='album-name'>原神 - 皎月云间之梦 Jade Moon Upon a Sea of Clouds</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_原神 - 风与异乡人.jpg'>
+                <p class='album-name'>原神 - 风与异乡人</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_原神 - 风与牧歌之城.jpg'>
+                <p class='album-name'>原神 - 风与牧歌之城</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_原神-ジュニャーナとヴィディヤーの森 Forest of Jnana and Vidya.jpg'>
+                <p class='album-name'>原神-ジュニャーナとヴィディヤーの森 Forest of Jnana and Vidya</p>
+            </li>
+            <li>
+                <img src='artwork\miHoYo_原神-輝く星々Vol. 3 (Original Game Soundtrack).jpg'>
+                <p class='album-name'>原神-輝く星々Vol. 3 (Original Game Soundtrack)</p>
+            </li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
